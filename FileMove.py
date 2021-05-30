@@ -14,7 +14,7 @@ import os
 ##
 
 # User enters the source directory 
-source_dir = input("What is your staring directory?: ")
+source_dir = input("What is your source directory?: ")
 # User enters the target directory
 target_dir = input("What is your end directory?: ")
 # User is asked if they would like to move all of the files in the directory
@@ -30,6 +30,14 @@ if move_all == ("y"):
     print("Done")
     exit(0)
 # Work in progress
-#elif("n"):
+elif("n"):
+    # Prints a list of all of the current folders/files in the source directory
+    print(os.listdir(source_dir))
+    # num takes the input for how many files the user would like to move
     num = input("How many files would you like to move?: ")
+    if num == ('all'):
+        print("Why didnt you say yes in the first place dumbass?")
+        exit(0)
+    # numExact asks the user which files they would like to move to the target directory
+    numExact = input("Which files would you like to move?: ")
     exit(0)
